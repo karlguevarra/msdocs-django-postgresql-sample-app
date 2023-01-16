@@ -18,4 +18,4 @@ class Review(models.Model):
     review_text = models.CharField(max_length=500)
     review_date = models.DateTimeField('review date')    
     def __str__(self):
-        return self.restaurant.name + " (" + self.review_date.strftime("%x") +")"
+        return f"{self.restaurant.name} (" + self.review_date.strftime("%x") + ")"
